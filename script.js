@@ -2,6 +2,8 @@
 
 document.getElementById('notify').style.display = "none";
 
+document.getElementById('message').style.display = "none";
+
 //Generating Random Number Function Area 
 
     document.getElementById('randomNumberGenerate').addEventListener('click',function(){
@@ -13,6 +15,18 @@ document.getElementById('notify').style.display = "none";
     document.getElementById('displayRandomNumber').style.textAlign = "center";
 
     document.getElementById('displayRandomNumber').style.color = "white";
+
+    var counter = 30;
+    setInterval(function(){
+        counter--;
+        if(counter>=0){
+            document.getElementById('time-counter').innerHTML =counter;
+        }
+        if(counter==0)
+        {
+            document.getElementById('submit').disabled = true;
+        }
+    },1000);
 })
 
 // Input Value Taker Function Area
@@ -55,7 +69,7 @@ function clickForSubmit(){
 
         document.getElementById('wrongPin').style.display = "none";
 
-        document.getElementById('count').innerText = 0  ;
+        document.getElementById('count').innerText ;
     }
 
     else
@@ -69,6 +83,11 @@ function clickForSubmit(){
         let countValue = document.getElementById('count').innerHTML;
         countValue--;
         document.getElementById('count').innerText = countValue;
+        if(countValue==0)
+        {
+            document.getElementById('submit').style.display = "none";
+            document.getElementById('message').style.display ="block"; 
+        }
 
     }
 

@@ -109,3 +109,13 @@ color: #E0B612;
     color: #FF3C5F;
     margin-top: 10px;
 }
+h1{
+    font-family: 'digital-7', sans-serif;
+    font-size: 4em;
+    color:orange;
+    text-align: center;
+}
+.form-control{
+    text-align:center;
+    font-size: 2em;
+}
